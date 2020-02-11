@@ -20,34 +20,39 @@
 
 .navbar-principale {
   width: 200px;
-  background-color: pink;
-  height: 90vh;
+  background-color: black;
+  height: 100vh;
   float: left;
   display: flex;
   flex-direction: column;
+  color: #8b8b8b;
+  position: fixed;
 }
 
 .contenitore-box0 {
   display: flex;
   justify-content: left;
-  border: 1px solid purple;
   height: 10%;
+  margin-top: 10px;
 }
 
 .contenitore-box1 {
-  border: 1px solid red;
   height: 15%;
+  font-size: 14px;
+  font-weight: lighter;
 }
 .contenitore-box2 {
-  border: 1px solid black;
-  height: 65%;
+  height: 55%;
+  font-size: 14px;
+  font-weight: lighter;
 }
 
 .contenitore-basso {
-  border: 1px solid green;
   height: 10%;
   font-size: 16px;
-  padding-left: 3px;
+  padding-left: 5px;
+  font-size: 14px;
+  font-weight: lighter;
 }
 
 .box1,
@@ -55,7 +60,8 @@
 .box1 i {
   display: flex;
   justify-content: left;
-  padding: 3px;
+  padding-left: 5px;
+  padding-bottom: 2px;
 }
 
 .box2,
@@ -63,7 +69,8 @@
 .box2 p {
   display: flex;
   justify-content: left;
-  padding-left: 3px;
+  padding-left: 5px;
+  padding-bottom: 2px;
 }
 
 .box2 h2 {
@@ -98,6 +105,12 @@
   padding: 10px 0 0 10px;
 }
 
+hr {
+  width: 85%;
+  margin: 5px auto;
+  border: 0.5px solid #8b8b8b;
+}
+
 /*************** MAIN **************/
 
 main {
@@ -105,7 +118,6 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  overflow-y: auto;
 }
 
 .barra-scura {
@@ -133,8 +145,9 @@ main {
 
 .main-nav {
   margin-top: 70px;
-  background-color: violet;
   width: 60%;
+  color: #8b8b8b;
+  margin-left: 230px;
 }
 
 .main-nav ul {
@@ -150,14 +163,14 @@ main {
 }
 
 .contenitore-album {
-  width: 100%;
-  height: 80vh;
+  border: 1px solid red;
+  min-width: 65%;
+  margin-left: 230px;
 }
 
 .contenitore-album h2,
 .contenitore-album h5 {
   color: white;
-  margin-left: 25px;
   margin-top: 10px;
   font-weight: lighter;
 }
@@ -168,17 +181,10 @@ main {
   margin-bottom: 10px;
 }
 
-.riproduttore {
-  width: 100%;
-  height: 10vh;
-  background-color: yellow;
-  position: fixed;
-  bottom: 0px;
-}
-
 section {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
+  border: 1px solid orange;
 }
 
 .cards {
@@ -186,15 +192,14 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   margin-right: 20px;
-  width: 96%;
+  width: 100%;
   margin: 0 auto;
-  border: 1px solid red;
   text-align: center;
+  border: 1px solid yellow;
 }
 
 .card {
   width: 200px;
-  background-color: rgb(61, 61, 61);
   height: 270px;
   margin-top: 40px;
   margin-right: 10px;
@@ -203,10 +208,12 @@ section {
 
 .titolo-canzone {
   font-size: 20px;
+  color: white;
 }
 
 .small {
   font-size: 12px;
+  color: #8b8b8b;
 }
 
 .overlay {
@@ -234,4 +241,72 @@ section {
 #artisti-popolari .card img,
 #nuove-uscite-popolari .card img {
   border-radius: 50%;
+}
+
+/************ BARRA DI RIPRODUZIONE**********/
+
+.riproduttore {
+  width: 100%;
+  height: 72px;
+  background-color: #282828;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+}
+
+.scatola {
+  border: 1px solid red;
+  width: 33%;
+}
+
+.scatola-sx {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+}
+.scatola-dx {
+  width: 200px;
+}
+
+.scatola-ct {
+  width: calc(100% - 400px);
+  min-width: 220px;
+}
+
+.scatolina1 {
+  width: 60%;
+  height: 100%;
+  border: 1px solid orange;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.scatolina1 img {
+  height: 50px;
+  width: 50px;
+}
+
+.scatolina2 {
+  width: 40%;
+  height: 100%;
+  border: 1px solid rgb(2, 161, 63);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.scatolina2 .far {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid red;
+}
+
+.paragrafi {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5px;
+  min-width: 80px;
 }
