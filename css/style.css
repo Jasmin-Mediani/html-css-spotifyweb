@@ -179,6 +179,7 @@ main {
   font-weight: lighter;
   font-size: 15px;
   margin-bottom: 10px;
+  color: #8b8b8b;
 }
 
 section {
@@ -219,7 +220,7 @@ section {
 .overlay {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 74%;
   opacity: 0;
   transition: 0.5s ease;
   background-color: #000000;
@@ -240,6 +241,11 @@ section {
 
 #artisti-popolari .card img,
 #nuove-uscite-popolari .card img {
+  border-radius: 50%;
+}
+
+#artisti-popolari .overlay,
+#nuove-uscite-popolari .overlay {
   border-radius: 50%;
 }
 
