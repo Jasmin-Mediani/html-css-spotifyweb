@@ -12,7 +12,6 @@
 }
 
 .container-fw {
-  background-color: red;
   width: 100%;
   height: 100vh;
   overflow-y: auto;
@@ -21,7 +20,7 @@
 .navbar-principale {
   width: 200px;
   background-color: black;
-  height: 100vh;
+  height: calc(100vh - 72px);
   float: left;
   display: flex;
   flex-direction: column;
@@ -32,23 +31,28 @@
 .contenitore-box0 {
   display: flex;
   justify-content: left;
-  height: 10%;
+  /*height: 10%;*/
+  height: 50px;
   margin-top: 10px;
 }
 
 .contenitore-box1 {
-  height: 15%;
+  /* height: 15%;*/
+  height: 100px;
+  margin-top: 20px;
   font-size: 14px;
   font-weight: lighter;
 }
 .contenitore-box2 {
-  height: 55%;
+  /*height: 65%;*/
+  height: 400px;
   font-size: 14px;
   font-weight: lighter;
 }
 
 .contenitore-basso {
-  height: 10%;
+  /*height: 10%;*/
+  height: 60px;
   font-size: 16px;
   padding-left: 5px;
   font-size: 14px;
@@ -118,12 +122,13 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: calc(100% - 200px);
+  margin-left: 200px;
 }
 
 .barra-scura {
   height: 70px;
-  width: calc(100% - 218px);
-  /* NOTA:  calc(100%-218px) è una mafiata: doveva essere calc(100%-200), ma con -200px la scrollbar sparisce dietro la barra scura...*/
+  width: calc(100% - 200px);
   position: fixed;
   top: 0;
   left: 200px;
@@ -141,13 +146,15 @@ main {
   border: 1px solid white;
   background-color: #141922;
   color: white;
+  margin-right: 25px;
 }
 
 .main-nav {
-  margin-top: 70px;
-  width: 60%;
+  margin-top: 90px;
+  width: 100%;
   color: #8b8b8b;
-  margin-left: 230px;
+  font-size: 14px;
+  max-width: 600px;
 }
 
 .main-nav ul {
@@ -160,12 +167,11 @@ main {
 
 .main-nav ul li {
   padding: 0px 10px 0px 10px;
+  padding: 10px;
 }
 
 .contenitore-album {
-  border: 1px solid red;
-  min-width: 65%;
-  margin-left: 230px;
+  width: 99%;
 }
 
 .contenitore-album h2,
@@ -173,6 +179,7 @@ main {
   color: white;
   margin-top: 10px;
   font-weight: lighter;
+  padding-left: 20px;
 }
 
 .contenitore-album h5 {
@@ -185,7 +192,6 @@ main {
 section {
   padding-top: 20px;
   padding-bottom: 50px;
-  border: 1px solid orange;
 }
 
 .cards {
@@ -196,12 +202,11 @@ section {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  border: 1px solid yellow;
 }
 
 .card {
   width: 200px;
-  height: 270px;
+  height: 170px;
   margin-top: 40px;
   margin-right: 10px;
   position: relative;
@@ -220,7 +225,7 @@ section {
 .overlay {
   position: absolute;
   width: 100%;
-  height: 74%;
+  height: 55%;
   opacity: 0;
   transition: 0.5s ease;
   background-color: #000000;
@@ -249,6 +254,26 @@ section {
   border-radius: 50%;
 }
 
+.card {
+  width: 118px;
+}
+
+.card img {
+  width: 118px;
+}
+
+.coppia {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#unicamente-per-te .coppia {
+  justify-content: start;
+}
+
+#unicamente-per-te .card {
+  margin-left: 40px;
+}
 /************ BARRA DI RIPRODUZIONE**********/
 
 .riproduttore {
@@ -261,7 +286,6 @@ section {
 }
 
 .scatola {
-  border: 1px solid red;
   width: 33%;
 }
 
@@ -277,12 +301,14 @@ section {
 .scatola-ct {
   width: calc(100% - 400px);
   min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .scatolina1 {
   width: 60%;
   height: 100%;
-  border: 1px solid orange;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -291,23 +317,24 @@ section {
 .scatolina1 img {
   height: 50px;
   width: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .scatolina2 {
   width: 40%;
   height: 100%;
-  border: 1px solid rgb(2, 161, 63);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  color: #8b8b8b;
 }
 
 .scatolina2 .far {
   padding-left: 10px;
   padding-right: 10px;
-  border: 1px solid red;
 }
 
 .paragrafi {
@@ -315,4 +342,233 @@ section {
   flex-direction: column;
   padding-left: 5px;
   min-width: 80px;
+}
+
+.paragrafi .titolo {
+  color: white;
+}
+
+.paragrafi .autore {
+  color: #8b8b8b;
+  font-size: 11px;
+}
+
+.colonna1,
+.colonna2 {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.colonna1 {
+  min-width: 220px;
+  max-width: 220px;
+  align-self: center;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+}
+
+.colonna2 {
+  min-width: 220px;
+  max-width: 100%;
+  align-self: center;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+
+.colonna2 hr {
+  border: 1px solid white;
+  width: 60%;
+}
+
+.time {
+  font-size: 10px;
+}
+
+/************* VERSIONE TABLET E MOBILE **********/
+
+@media screen and (max-width: 576px) {
+  .navbar-principale {
+    width: 50px;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  .box1 h3,
+  .box2 {
+    display: none;
+  }
+
+  .box2 {
+    height: 90%;
+  }
+
+  .contenitore-basso {
+    margin-top: 60px;
+  }
+
+  .contenitore-basso small {
+    display: none;
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - 50px);
+    margin-left: 50px;
+  }
+  .barra-scura {
+    left: 50px;
+    width: calc(100% - 50px);
+  }
+
+  .box1 .fas {
+    margin-top: 20px;
+  }
+
+  .contenitore-box0,
+  .contenitore-box1,
+  .contenitore-box2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .box1 {
+    align-self: center;
+    padding: 0;
+  }
+
+  #logo {
+    align-self: center;
+  }
+
+  .cards {
+    justify-content: center;
+    width: auto;
+  }
+
+  .cards img,
+  .card {
+    width: 200px;
+  }
+
+  .main-nav {
+    width: 70%;
+    min-width: 400px;
+  }
+}
+
+/*perché se metto i due punti a max-width qui mi dà errore?*/
+@media screen and (min-width: 575px, max-width: 991px) {
+  .cards {
+    width: auto;
+  }
+
+  .coppia {
+    width: 50%;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .cards img,
+  .card {
+    width: 100px;
+  }
+
+  .overlay {
+    width: 150;
+  }
+}
+
+@media screen and (max-width: 731px) {
+  .cards {
+    justify-content: center;
+  }
+
+  .card {
+    width: 140px;
+  }
+
+  .card img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .overlay {
+    /*non va bene. Ma non va bene proprpio il modo in cui ho messo l'overlay :P */
+    height: 140px;
+    width: 140px;
+  }
+
+  .coppia {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 732px) {
+  .coppia {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .card,
+  .card img {
+    width: 120px;
+  }
+
+  .overlay {
+    height: 120px;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .coppia {
+    width: 33.3333%;
+    max-width: 350px;
+  }
+
+  .card,
+  .card img {
+    width: 110px;
+  }
+
+  .overlay {
+    height: 110px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .coppia {
+    width: 100%;
+    justify-content: space-evenly;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .card {
+    height: 230px;
+    width: 170px;
+    margin-left: 5px;
+  }
+
+  .card img {
+    height: 170px;
+    width: 170px;
+  }
+
+  .overlay {
+    width: 170px;
+    height: 170px;
+  }
 }
