@@ -190,8 +190,11 @@ main {
 }
 
 section {
-  padding-top: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
+}
+
+#focus {
+  padding-top: 50px;
 }
 
 .cards {
@@ -208,7 +211,7 @@ section {
   width: 200px;
   height: 170px;
   margin-top: 40px;
-  margin-right: 10px;
+  /*margin-right: 10px;*/
   position: relative;
 }
 
@@ -388,6 +391,22 @@ section {
   font-size: 10px;
 }
 
+/*     NON FUNZIONA
+.coppia {
+    border: 1px solid red;
+}
+
+.card:first-of-type {
+    border: 1px solid blue;
+    margin-right: 30px !important;
+}
+
+.card:last-of-type {
+    border: 1px solid yellow;
+    margin-left: 30px !important;
+}
+ */
+
 /************* VERSIONE TABLET E MOBILE **********/
 
 @media screen and (max-width: 576px) {
@@ -464,6 +483,10 @@ section {
     width: 70%;
     min-width: 400px;
   }
+
+  .coppia {
+    margin-bottom: 20px;
+  }
 }
 
 /*perché se metto i due punti a max-width qui mi dà errore?*/
@@ -535,7 +558,6 @@ section {
 @media screen and (min-width: 991px) {
   .coppia {
     width: 33.3333%;
-    max-width: 350px;
   }
 
   .card,
