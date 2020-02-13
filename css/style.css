@@ -211,27 +211,36 @@ section {
   width: 200px;
   height: 170px;
   margin-top: 40px;
-  /*margin-right: 10px;*/
   position: relative;
+  flex-basis: 200px;
+  margin-left: 25px;
 }
 
 .titolo-canzone {
   font-size: 20px;
   color: white;
+  width: 110px;
+  margin-top: 10px;
 }
 
 .small {
   font-size: 12px;
   color: #8b8b8b;
+  width: 110px;
+  margin-top: 5px;
 }
 
 .overlay {
   position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
   width: 100%;
-  height: 55%;
   opacity: 0;
   transition: 0.5s ease;
-  background-color: #000000;
+  background-color: rgb(0, 0, 0);
 }
 
 .overlay .far {
@@ -257,26 +266,11 @@ section {
   border-radius: 50%;
 }
 
-.card {
-  width: 118px;
-}
-
-.card img {
-  width: 118px;
-}
-
 .coppia {
   display: flex;
   flex-wrap: nowrap;
 }
 
-#unicamente-per-te .coppia {
-  justify-content: start;
-}
-
-#unicamente-per-te .card {
-  margin-left: 40px;
-}
 /************ BARRA DI RIPRODUZIONE**********/
 
 .riproduttore {
@@ -391,21 +385,9 @@ section {
   font-size: 10px;
 }
 
-/*     NON FUNZIONA
-.coppia {
-    border: 1px solid red;
+.contenitore-img-e-overlay {
+  position: relative;
 }
-
-.card:first-of-type {
-    border: 1px solid blue;
-    margin-right: 30px !important;
-}
-
-.card:last-of-type {
-    border: 1px solid yellow;
-    margin-left: 30px !important;
-}
- */
 
 /************* VERSIONE TABLET E MOBILE **********/
 
@@ -489,29 +471,6 @@ section {
   }
 }
 
-/*perché se metto i due punti a max-width qui mi dà errore?*/
-@media screen and (min-width: 575px, max-width: 991px) {
-  .cards {
-    width: auto;
-  }
-
-  .coppia {
-    width: 50%;
-    justify-content: space-around;
-    display: flex;
-    flex-wrap: nowrap;
-  }
-
-  .cards img,
-  .card {
-    width: 100px;
-  }
-
-  .overlay {
-    width: 150;
-  }
-}
-
 @media screen and (max-width: 731px) {
   .cards {
     justify-content: center;
@@ -524,12 +483,6 @@ section {
   .card img {
     width: 140px;
     height: 140px;
-  }
-
-  .overlay {
-    /*non va bene. Ma non va bene proprpio il modo in cui ho messo l'overlay :P */
-    height: 140px;
-    width: 140px;
   }
 
   .coppia {
@@ -546,12 +499,10 @@ section {
   }
 
   .card,
-  .card img {
+  .card img,
+  .small,
+  .titolo-canzone {
     width: 120px;
-  }
-
-  .overlay {
-    height: 120px;
   }
 }
 
@@ -561,12 +512,10 @@ section {
   }
 
   .card,
-  .card img {
+  .card img,
+  .small,
+  .titolo-canzone {
     width: 110px;
-  }
-
-  .overlay {
-    height: 110px;
   }
 }
 
@@ -584,13 +533,10 @@ section {
     margin-left: 5px;
   }
 
-  .card img {
+  .card img,
+  .small,
+  .titolo-canzone {
     height: 170px;
     width: 170px;
-  }
-
-  .overlay {
-    width: 170px;
-    height: 170px;
   }
 }
