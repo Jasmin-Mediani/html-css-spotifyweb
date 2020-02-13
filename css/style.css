@@ -135,7 +135,7 @@ main {
   left: 200px;
   display: flex;
   justify-content: flex-end;
-  background-color: rgba(20, 25, 34, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 999;
 }
 
