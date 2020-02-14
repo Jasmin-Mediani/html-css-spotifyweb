@@ -203,7 +203,7 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-right: 20px;
+  /*margin-right: 20px;*/
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -538,6 +538,7 @@ section {
 @media screen and (max-width: 731px) {
   .cards {
     justify-content: center;
+    border: 1px;
   }
 
   .card {
@@ -567,6 +568,10 @@ section {
   .small,
   .titolo-canzone {
     width: 120px;
+  }
+
+  .card {
+    margin-right: -25px;
   }
 }
 
