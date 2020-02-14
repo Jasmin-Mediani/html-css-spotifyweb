@@ -5,6 +5,10 @@
   font-family: "Roboto";
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .clearfix {
   content: "";
   display: table;
@@ -567,11 +571,15 @@ section {
   .card img,
   .small,
   .titolo-canzone {
-    width: 120px;
+    width: 110px;
   }
 
   .card {
     margin-right: -25px;
+  }
+
+  .cards {
+    padding-right: 20px;
   }
 }
 
